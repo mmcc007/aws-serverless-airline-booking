@@ -260,7 +260,7 @@ class PerftestStackAirlineStack extends cdk.Stack {
             definition: stepfuncDefinition
         });
         const ecsLambda = new lambda.Function(this, "ecstasklambda", {
-            runtime: lambda.Runtime.NODEJS_10_X,
+            runtime: lambda.Runtime.NODEJS_14_X,
             handler: "index.handler",
             code: new lambda.AssetCode("lambda"),
             functionName: `${STACK_NAME}-ecs-task-change`
